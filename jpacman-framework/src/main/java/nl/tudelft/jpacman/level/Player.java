@@ -42,13 +42,14 @@ public class Player extends Unit {
      * @param deathAnimation
      *            The sprite to be shown when this player dies.
      */
-    protected Player(Map<Direction, Sprite> spriteMap, AnimatedSprite deathAnimation) {
+    public Player(Map<Direction, Sprite> spriteMap, AnimatedSprite deathAnimation) {
         this.scoreManager = new PlayerScoreManager();
         this.alive = true;
         this.sprites = spriteMap;
         this.deathSprite = deathAnimation;
         deathSprite.setAnimating(false);
     }
+
 
     /**
      * Returns whether this player is alive or not.
